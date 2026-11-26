@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kas/pages/chat_page.dart';
 import 'package:kas/pages/home_page.dart';
 import 'package:kas/pages/profile_pages.dart';
 import 'package:kas/pages/search_page.dart';
