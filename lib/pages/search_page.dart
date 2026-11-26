@@ -9,6 +9,15 @@ class SearchPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Search'),
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: TextField(
+          decoration: InputDecoration(
+            hintText: 'Cari..',
+            prefixIcon: Icon(Icons.search),
+            border: OutlineInputBorder(),
+          ),
+        ))
     );
   }
 }

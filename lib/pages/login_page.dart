@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kas/pages/home_page.dart';
+import 'package:kas/pages/main_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const new({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -21,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
           title: Text('Login'),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               //logo
@@ -57,11 +58,8 @@ class _LoginPageState extends State<LoginPage> {
                   var username = usernameController.text;
                   var password = passwordController.text;
                   print('Cek isi: username=$username, password=$password');
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_){
-                    return HomePage();
-                    }),
+                  Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (_) => MainPage())
                   );
                 }, 
                 child: Text('Login')

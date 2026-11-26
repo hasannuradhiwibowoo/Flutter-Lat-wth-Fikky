@@ -30,17 +30,23 @@ class HomePage extends StatelessWidget {
               padding: .symmetric(horizontal: 8),
               child: Row(
                 children: [
-                  CircleAvatar(),
+                  CircleAvatar(
+                    backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
+                  ),
                   SizedBox(width: 8),
                   Expanded(
-                    child: Column(
-                      crossAxisAlignment: .start,
+                    child: Row(
                       children: [
-                        Text('Info Indo', style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: .bold,
-                        ),),
-                        Text('FSTVLST - Jefferson'),
+                        Column(
+                          crossAxisAlignment: .start,
+                          children: [
+                            Text('Info Indo', style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: .bold,
+                            ),),
+                            Text('FSTVLST - Jefferson'),
+                          ],
+                        ),
                       ],
                     ),
                   ),

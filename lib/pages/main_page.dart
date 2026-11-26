@@ -31,8 +31,8 @@ class _MainPageState extends State<MainPage> {
           currentIndex: selectedPage,
           onTap: (value) {
             selectedPage = value;
-            setState(() {
-              
+            setState(() {  
+               
             });
           },
           items:[
