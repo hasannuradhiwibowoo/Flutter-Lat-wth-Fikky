@@ -57,15 +57,7 @@ class _HomePageState extends State<HomePage> {
                 itemCount: provider.posts.length,
                 itemBuilder: (context, index) {
                   var post = provider.posts[index];
-                  return PostCard(
-                    username: post.username,
-                    song: '-',
-                    avatarUrl: '-',
-                    imageUrl: post.image,
-                    likeCount: '0',
-                    commentCount: '0',
-                    shareCount: '0',
-                  );
+                  return PostCard(post: post);
                 },
               );
             }
