@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyKas extends StatelessWidget {
-  const new({super.key});
+  const MyKas({super.key});
 
   @override
   Widget build(BuildContext context) {
