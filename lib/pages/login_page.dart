@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kas/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const new({super.key});
@@ -56,6 +57,12 @@ class _LoginPageState extends State<LoginPage> {
                   var username = usernameController.text;
                   var password = passwordController.text;
                   print('Cek isi: username=$username, password=$password');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_){
+                    return HomePage();
+                    }),
+                  );
                 }, 
                 child: Text('Login')
               ),
