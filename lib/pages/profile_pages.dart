@@ -15,11 +15,23 @@ class ProfilePages extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR90b07If3lj8xBWnmdtUrPfgqLHRwTeWBL4twaBPDkEt63ypwe5hXVBv8&s=10'),
+              Center(
+                child: ClipOval(
+                  child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR90b07If3lj8xBWnmdtUrPfgqLHRwTeWBL4twaBPDkEt63ypwe5hXVBv8&s=10',
+                  width: 200,
+                  height: 200,
+                  fit: .cover
+                    ),
+                  ),
+                ),
               SizedBox(
                 height: 10,
               ),
-              Text('Nama : Bawakdewak'),
+              Text('Nama : Bawakdewak',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: .bold,
+              ),),
               SizedBox(
                 height: 10,
               ),

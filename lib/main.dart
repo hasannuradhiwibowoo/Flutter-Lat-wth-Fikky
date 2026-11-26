@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kas/pages/login_page.dart';
+import 'package:kas/pages/main_page.dart';
 import 'package:kas/pages/profile_pages.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyKas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ProfilePages(),
+      home: MainPage(),
     );
   }
 }
