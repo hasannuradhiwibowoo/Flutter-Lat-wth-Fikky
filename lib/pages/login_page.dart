@@ -55,12 +55,18 @@ class _LoginPageState extends State<LoginPage> {
               ),
               ElevatedButton(
                 onPressed: (){
-                  var username = usernameController.text;
-                  var password = passwordController.text;
-                  print('Cek isi: username=$username, password=$password');
-                  Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (_) => MainPage())
-                  );
+                  final email = usernameController.text.trim();
+                  final password = passwordController.text;
+                  if (email == 'anjay@gmail.cum' && password == 'atmin123') {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => MainPage()),
+                    );
+                  }
+                  else {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('email/password salah'))
+                    );
+                  }
                 }, 
                 child: Text('Login')
               ),
