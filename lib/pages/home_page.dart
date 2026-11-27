@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kas/pages/chat_page.dart';
+import 'package:kas/widgets/post_card.dart';
 
 class HomePage extends StatelessWidget {
   const new({super.key});
@@ -24,63 +25,14 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: .symmetric(horizontal: 8),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
-                  ),
-                  SizedBox(width: 8),
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: .start,
-                          children: [
-                            Text('Info Indo', style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: .bold,
-                            ),),
-                            Text('FSTVLST - Jefferson'),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Icon(Icons.menu)
-                ],
-              ),
-            ),
-            Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT70yJP5MFVigyEyd8L1RRqqNqz-4aflLc14tp2viqx3ZBODEdPdG1dvng&s=10', width: double.infinity, fit: .cover),
-            Padding(
-              padding: .symmetric(horizontal: 8),
-              child: Row(
-                children: [
-                  Icon(Icons.favorite),
-                  SizedBox(width: 2),
-                  Text('2K'),
-                  SizedBox(width: 8),
-                  
-                  Icon(Icons.comment),
-                  SizedBox(width: 2),
-                  Text('2'),
-                  SizedBox(width: 8),
-                  
-                  Icon(Icons.repeat),
-                  SizedBox(width: 2),
-                  Text('Repost'),
-                  SizedBox(width: 8),
-                  
-                  Spacer(),
-                  Icon(Icons.bookmark),
-                ],
-              ),
-            ),
-          ],
-        ),
+        body: Padding(
+          padding: .all(10),
+          child: ListView(
+            children: [
+              PostCard(username: '', song: '', avatarUrl: '', imageUrl: '', likeCount: '', commentCount: '', shareCount: '',),
+              PostCard(username: '', song: '', avatarUrl: '', imageUrl: '', likeCount: '', commentCount: '', shareCount: '',),
+            ]
+          ))
       ),
     );
   }
